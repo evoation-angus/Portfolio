@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Side navigation -->
+    <div class="sidenav">
+        <a href="#">UX/UI</a>
+        <a href="#">Java</a>
+        <a href="#">NodeJS</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!--<p id="titleSub">Welcome, I am</p>-->
+    <div class="typing-container">
+        <p id="sentence" class="sentence"></p>
+        <span class="input-cursor"></span>
+    </div>
+    <p id="title">Angus Horan <br><br>
+        Fullstack w/ Java, UI and JavaScript
+    </p>
+
+
+    <h2>Dragonside</h2>
+    <p>
+        Multi-part project with:
+    <ol>
+        <li>handing and processing api data with Java, storing data</li>
+        <li>Storing data in mysql database</li>
+        <li>Front end with access to database data and present accordingly</li>
+    </ol>
+    </p>
+    <p>
+        Website: <a target="_blank"
+            href="https://evoation-angus.github.io/dragonsidesynergytool/">dragonsidesynergytool</a>
+        Github: <a href="https://github.com/evoation-angus/dragonsidesynergytool"></a>
+    </p>
+
+    <h2>Node js automated web navigation</h2>
+    <h2></h2>
+
+    <script>
+        async function typeSentence(sentence, eleRef, delay = 100) {
+            const letters = sentence.split("");
+            let i = 0;
+            while (i < letters.length) {
+                await waitForMs(delay);
+                $(eleRef).append(letters[i]);
+                i++
+            }
+            return;
+        }
+
+
+        function waitForMs(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms))
+        }
+
+        typeSentence("Welcome, I am", "#sentence");
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
