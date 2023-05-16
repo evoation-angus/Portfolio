@@ -4,7 +4,28 @@ body{
     color: white;
     background-color: #1f1f1f;
 }
-
+a:visited, a:link{
+    color: white;
+    
+}
+#links a{
+    border-radius: 5px;
+    border-color: #818181;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+}
+code{
+    font-size: 15px;
+    background-color:#181818;
+}
+.content{
+    padding-left: 400px;
+    padding-right: 300px;
+}
+.left-align{
+    text-align: left;
+}
 #title {
     font-size: 50px;
     margin-top: 0;
@@ -20,7 +41,10 @@ body{
     justify-content: center;
     align-items: center;
 }
-
+li{
+    list-style-type: none;
+    padding-top: 5px;
+}
 .input-cursor {
     display: inline-block;
     width: 2px;
@@ -33,6 +57,7 @@ body{
     color: white;
     margin-top: 10%;
     margin-bottom: 0;
+    font-size: 50px;
 }
 
 @keyframes blink {
@@ -63,7 +88,7 @@ body{
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
+    width: 200px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -71,6 +96,7 @@ body{
     background-color: #111; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
+    
   }
   
   /* The navigation menu links */
@@ -82,19 +108,21 @@ body{
     display: block;
   }
   
-  /* When you mouse over the navigation links, change their color */
+
   .sidenav a:hover {
     color: #f1f1f1;
   }
   
-  /* Style page content */
+
   .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
+    margin-left: 160px;
     padding: 0px 10px;
   }
   
   /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
+  @media screen and (max-width: 450px) {
+    .sidenav {padding-top: 15px; display: none;}
     .sidenav a {font-size: 18px;}
+    .content{padding-left: 20px; padding-right: 20px}
+    code{font-size: 7px;}
   }
